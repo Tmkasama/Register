@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'ht.css' %}" />
+
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+    <title>Forms</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Customer Details</h2>
+      <form action="{%url 'data_post'%}" method="POST">
+        {% csrf_token %} {{ form }}
+        <button type="submit">Submit</button>
+      
+
+      <div class="big">
+        <div class="Delivery">
+          <h2>Delivery</h2>
+          <form action="" method="">{{Del}}</form>
+        </div>
+
+        <div class="Payment">
+          <h2>Payment</h2>
+          <form action="" method="">{{Pay}}</form>
+        </div>
+
+        <div class="Amount">
+          <h2>Amount</h2>
+          <form action="" method="">{{Amo}}</form>
+        </div>
+        
+      </div>
+    </form>
+    </div>
+  </body>
+</html>
